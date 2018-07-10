@@ -6,7 +6,7 @@
 #    By: ccliffor <ccliffor@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/16 16:38:47 by ccliffor          #+#    #+#              #
-#    Updated: 2018/06/12 13:25:00 by ccliffor         ###   ########.fr        #
+#    Updated: 2018/07/10 15:53:15 by ccliffor         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,10 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 				ft_putnbr_fd.c \
 				\
 				ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c\
-				ft_lstmap.c
+				ft_lstmap.c \
+				\
+				ft_is_whitespace.c ft_factorial.c ft_realloc.c ft_strre.c \
+				ft_lstprint.c get_next_line.c
 OBJS		= $(SRCS:%.c=%.o)
 
 #-- Compiler, libs, flags

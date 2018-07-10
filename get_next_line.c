@@ -6,7 +6,7 @@
 /*   By: ccliffor <ccliffor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 10:55:21 by ccliffor          #+#    #+#             */
-/*   Updated: 2018/07/10 13:34:36 by ccliffor         ###   ########.fr       */
+/*   Updated: 2018/07/02 12:46:21 by ccliffor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char		*store_bytes(char **buff)
 		return (NULL);
 	p_buff = &(*buff)[i + ((*buff)[i] == '\n')];
 	tmp = ft_strdup(p_buff);
-	ft_strdel(buff);
+	ft_strdel(buff);//----------------------------------------------------------
 	*buff = tmp;
 	return (line);
 }
@@ -56,7 +56,7 @@ static int		read_more(const int fd, char **buff)
 		return (-1);
 	more[br] = '\0';
 	tmp = ft_strjoin(*buff, more);
-	ft_strdel(buff);
+	ft_strdel(buff);//----------------------------------------------------------
 	*buff = tmp;
 	return (1);
 }
