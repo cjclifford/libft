@@ -6,7 +6,7 @@
 /*   By: ccliffor <ccliffor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 08:14:40 by ccliffor          #+#    #+#             */
-/*   Updated: 2018/06/12 12:22:16 by ccliffor         ###   ########.fr       */
+/*   Updated: 2018/07/10 15:58:42 by ccliffor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,12 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int				ft_is_whitespace(int c);
+int				ft_factorial(int n);
+char			*ft_strre(char *str, size_t size);
+void			*ft_realloc(void *ap, size_t old_size, size_t new_size);
+void			ft_lstprint(t_list *list);
+int				get_next_line(int fd, char **line);
 
 #endif
