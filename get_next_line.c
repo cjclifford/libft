@@ -6,11 +6,11 @@
 /*   By: ccliffor <ccliffor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 10:55:21 by ccliffor          #+#    #+#             */
-/*   Updated: 2018/07/02 12:46:21 by ccliffor         ###   ########.fr       */
+/*   Updated: 2018/07/10 16:01:15 by ccliffor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int		has_nl(const char *buff)
 {
