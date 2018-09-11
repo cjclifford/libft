@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_factorial.c                                     :+:      :+:    :+:   */
+/*   vec_fill.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccliffor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 15:57:51 by ccliffor          #+#    #+#             */
-/*   Updated: 2018/06/19 15:57:52 by ccliffor         ###   ########.fr       */
+/*   Created: 2018/08/02 19:29:06 by mhoosen           #+#    #+#             */
+/*   Updated: 2018/08/02 19:31:40 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "vec.h"
 
-int     ft_factorial(int n)
+void	vec_fill(t_vec *v, void *item)
 {
-    if (!n)
-        return (1);
-    if (n)
-        n *= ft_factorial(n - 1);
-    return (n);
+	size_t i;
+
+	if (!v || !item)
+		return ;
+	i = 0;
+	while (i < v->length)
+	{
+		ft_memcpy(v->data + v->type_size * i, item, v->type_size);
+		i++;
+	}
 }

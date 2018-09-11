@@ -6,13 +6,13 @@
 #    By: ccliffor <ccliffor@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/16 16:38:47 by ccliffor          #+#    #+#              #
-#    Updated: 2018/07/10 15:53:15 by ccliffor         ###   ########.fr        #
+#    Updated: 2018/09/04 15:10:23 by ccliffor         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #-- PROGRAM --#
 NAME		= libft.a
-SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+SRCFILES	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 				ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c \
 				ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c \
 				ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c \
@@ -29,12 +29,21 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 				ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c\
 				ft_lstmap.c \
 				\
-				ft_is_whitespace.c ft_factorial.c ft_realloc.c ft_strre.c \
-				ft_lstprint.c get_next_line.c
+				ft_is_whitespace.c ft_realloc.c ft_strre.c ft_lstprint.c \
+				get_next_line.c hex_to_dec.c \
+				\
+				vec_append.c vec_del_last.c vec_del_n.c vec_del_one.c \
+				vec_dup_last.c vec_dup_n.c vec_dup_one.c vec_extend.c \
+				vec_fill.c vec_free.c vec_get.c vec_init.c vec_pop_last.c \
+				vec_pop_n.c vec_pop_one.c vec_reserve.c \
+				\
+				ft_mem_resize.c
+SRCDIR		= src
+SRCS		= $(SRCFILES:%=$(SRCDIR)/%)
 OBJS		= $(SRCS:%.c=%.o)
 
 #-- Compiler, libs, flags
-INCLUDES	= -I .
+INCLUDES	= -I includes
 WFLAGS		= -Wall -Wextra -Werror
 CC			= gcc
 CFLAGS		= $(WFLAGS) $(INCLUDES)
